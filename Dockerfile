@@ -8,3 +8,7 @@ COPY Gemfile /www/Gemfile
 COPY Gemfile.lock /www/Gemfile.lock
 RUN bundle install
 COPY . /www
+USER root
+EXPOSE 3000 28080
+# Default command:
+CMD bundle exec puma --bind tcp://0.0.0.0:3000

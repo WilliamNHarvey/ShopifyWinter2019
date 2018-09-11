@@ -11,5 +11,5 @@ services:
       - db
   db:
     image: postgres
-    volumes:
-      - ./tmp/db:/www/lib/postgresql/data
+#    volumes:
+#      - ./tmp/db:/www/lib/postgresql/data

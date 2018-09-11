@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: shopify-winter-2019-ipv4-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: shopify-winter-2019-ipv4-address
+spec:
+  rules:
+  - host: ${DNS_WEBSITE}
+    http:
+      paths:
+      - backend:
+          serviceName: shopify-winter-2019-web
+          servicePort: 80
+  - host: ${DNS_ASSETS}
+    http:
+      paths:
+      - backend:
+          serviceName: shopify-winter-2019-assets
+          servicePort: 80

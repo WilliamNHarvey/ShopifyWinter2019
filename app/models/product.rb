@@ -1,6 +1,7 @@
 class Product < ApplicationRecord
   belongs_to :shop
-  has_many :line_items
+  has_many :line_items, dependent: :destroy
+  delegate :shop, to: :line_items
 
   after_save :update_line_items
 

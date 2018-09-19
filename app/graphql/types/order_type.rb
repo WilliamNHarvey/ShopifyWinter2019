@@ -1,66 +1,37 @@
 module Types
   class OrderType < Types::BaseObject
-    field :id, ID, null: false
+    field :id, Int, null: true
     field :created_at, Int, null: true
     field :updated_at, Int, null: true
-    field :price, String, null: true
+    field :price, String, null: true, description: "The price of the order"
 
     def price
       object.price
     end
 
-    field :currency, String, null: true
+    field :currency, String, null: true, description: "The currency of the order's price"
 
     def currency
       object.currency
     end
 
-    field :shop, Types::ShopType, null: true
+    field :shop, Types::ShopType, null: true, description: "The shop the order belongs to"
 
     def shop
       object.shop
     end
 
-    field :line_items, [Types::LineItemType], null: true do
-      argument :id, ID, required: false
-      argument :ids, [ID], required: false
+    field :line_items, [Types::LineItemType], null: true, description: "Get the line items belonging to the order. Can provide IDs to only get which of those line items belong to the order." do
+      argument :id, [Int], required: false
     end
 
     def line_items(args = {})
-      items ||= object.line_items
-      if args[:id] || args[:ids]
-        items.where(id: args[:id] || args[:ids])
+      items = object.line_items
+      if args[:id]
+        items.where(id: args[:id])
       else
         items
       end
     end
-    # field :line_items, type: LineItemType, null: true do
-    #   resolve -> (obj, args, ctx) {
-    #     obj.line_items.to_a
-    #   } do 
-    #     argument :id, ID, required: false
-    #   end
-    # end
-    # field :shop, type: ShopType do
-    #   resolve -> (obj, args, ctx) {
-    #     obj.shop
-    #   } do 
-    #     argument :id, ID, required: false
-    #   end
-    # end
-    # field :updated_at do
-    #   type Int
-
-    #   resolve -> (obj, args, ctx) {
-    #     obj.updated_at.to_i
-    #   }
-    # end
-    # field :created_at do
-    #   type Int
-
-    #   resolve -> (obj, args, ctx) {
-    #     obj.created_at.to_i
-    #   }
-    # end
   end
 end

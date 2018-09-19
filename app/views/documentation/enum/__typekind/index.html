@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="__TypeKind GraphQL documentation">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>__TypeKind</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
+    <script>
+
+    // Add anchors on DOMContentLoaded
+    document.addEventListener("DOMContentLoaded", function(event) {
+      anchors.options = {
+        placement: 'left',
+        visible: 'hover',
+        icon: '¶'
+      };
+      anchors.add('h2, h3, h4, h5, h6, .anchored');
+    });
+
+    </script>
+  </head>
+  <body>
+
+    <div id="wrap">
+      <div id="header">
+      </div>
+      <div id="sidebar">
+        <ul class="categories">
+  <li>
+    <ul class="menu-root">
+      <li>
+        <a href="/documentation/">GraphQL Reference</a>
+    </ul>
+  </li>
+
+  <li>
+    <p>Queries</p>
+    <ul class="menu-root">
+      <li>
+        <a href="/documentation/operation/query/" class="sidebar-link">
+          Query
+        </a>
+      </li>
+      <li>
+        <a href="/documentation/operation/mutation/" class="sidebar-link">
+          Mutation
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/documentation/object">Objects</a></p>
+    <ul class="menu-root">
+      
+        
+      <li>
+        <a href="/documentation/object/lineitem/" class="sidebar-link">
+          LineItem
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/documentation/object/order/" class="sidebar-link">
+          Order
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/documentation/object/product/" class="sidebar-link">
+          Product
+        </a>
+      </li>
+      
+        
+      <li>
+        <a href="/documentation/object/shop/" class="sidebar-link">
+          Shop
+        </a>
+      </li>
+      
+        
+      
+      
+    </ul>
+  </li>
+
+  <li>
+    <p><a href="/documentation/operation/mutation">Mutations</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="/documentation/mutation/createlineitem/" class="sidebar-link">
+          createLineItem
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/mutation/createorder/" class="sidebar-link">
+          createOrder
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/mutation/createproduct/" class="sidebar-link">
+          createProduct
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/mutation/createshop/" class="sidebar-link">
+          createShop
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/mutation/createshops/" class="sidebar-link">
+          createShops
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/mutation/deletelineitems/" class="sidebar-link">
+          deleteLineItems
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/mutation/deleteorders/" class="sidebar-link">
+          deleteOrders
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/mutation/deleteproducts/" class="sidebar-link">
+          deleteProducts
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/mutation/deleteshops/" class="sidebar-link">
+          deleteShops
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/mutation/editlineitem/" class="sidebar-link">
+          editLineItem
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/mutation/editorder/" class="sidebar-link">
+          editOrder
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/mutation/editproduct/" class="sidebar-link">
+          editProduct
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/mutation/editshop/" class="sidebar-link">
+          editShop
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+
+  
+
+  <li>
+    <p><a href="/documentation/scalar">Scalars</a></p>
+    <ul class="menu-root">
+      
+      
+      <li>
+        <a href="/documentation/scalar/boolean/" class="sidebar-link">
+          Boolean
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/scalar/float/" class="sidebar-link">
+          Float
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/scalar/int/" class="sidebar-link">
+          Int
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/documentation/scalar/string/" class="sidebar-link">
+          String
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+      </div>
+      <div id="content">
+
+        <h1>
+<a id="__typekind" class="anchor" href="#__typekind" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>__TypeKind</h1>
+<p>An enum describing what kind of type a given <code>__Type</code> is.</p>
+<h3 id="fields">
+<a id="values" class="anchor" href="#values" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Values</h3>
+  <h4 id="scalar" class="name anchored">
+<a id="scalar" class="anchor" href="#scalar" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SCALAR</h4>
+  <div class="description-wrapper">
+   <p>Indicates this type is a scalar.</p>
+  </div>
+  <h4 id="object" class="name anchored">
+<a id="object" class="anchor" href="#object" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>OBJECT</h4>
+  <div class="description-wrapper">
+   <p>Indicates this type is an object. `fields` and `interfaces` are valid fields.</p>
+  </div>
+  <h4 id="interface" class="name anchored">
+<a id="interface" class="anchor" href="#interface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INTERFACE</h4>
+  <div class="description-wrapper">
+   <p>Indicates this type is an interface. `fields` and `possibleTypes` are valid fields.</p>
+  </div>
+  <h4 id="union" class="name anchored">
+<a id="union" class="anchor" href="#union" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>UNION</h4>
+  <div class="description-wrapper">
+   <p>Indicates this type is a union. `possibleTypes` is a valid field.</p>
+  </div>
+  <h4 id="enum" class="name anchored">
+<a id="enum" class="anchor" href="#enum" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ENUM</h4>
+  <div class="description-wrapper">
+   <p>Indicates this type is an enum. `enumValues` is a valid field.</p>
+  </div>
+  <h4 id="input_object" class="name anchored">
+<a id="input_object" class="anchor" href="#input_object" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INPUT_OBJECT</h4>
+  <div class="description-wrapper">
+   <p>Indicates this type is an input object. `inputFields` is a valid field.</p>
+  </div>
+  <h4 id="list" class="name anchored">
+<a id="list" class="anchor" href="#list" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LIST</h4>
+  <div class="description-wrapper">
+   <p>Indicates this type is a list. `ofType` is a valid field.</p>
+  </div>
+  <h4 id="non_null" class="name anchored">
+<a id="non_null" class="anchor" href="#non_null" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>NON_NULL</h4>
+  <div class="description-wrapper">
+   <p>Indicates this type is a non-null. `ofType` is a valid field.</p>
+  </div>
+
+      </div>
+
+      <!-- mobile only -->
+      <div id="mobile-header">
+        <a class="menu-button"></a>
+        <a class="logo" href="/documentation/">
+
+        </a>
+      </div>
+      <div id="mobile-shade"></div>
+
+    </div>
+
+  </body>
+</html>

@@ -1,16 +1,20 @@
 default: &default
+  dataset_id: william-harvey-shopify-2019
   adapter: postgresql
   encoding: unicode
-  host: db
+  host: shopify-backend
   username: postgres
-  password:
+  password: 
   pool: 5
 
 development:
   <<: *default
   database: www_development
 
-
 test:
   <<: *default
   database: www_test
+
+production:
+  <<: *default
+  database: www_production

@@ -1,6 +1,6 @@
 version: '3'
 services:
-  db:
+  shopify-backend:
     restart: always
     image: postgres:9.6
     ports:
@@ -15,7 +15,7 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - db
+      - shopify-backend
     stdin_open: true
     tty: true
 volumes:

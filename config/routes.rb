@@ -3,9 +3,7 @@ Rails.application.routes.draw do
   #   mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
   # end
   use_doorkeeper
-  if Rails.env.development?
-    mount GraphiQL::Rails::Engine, at: "/", graphql_path: "/graphql"
-  end
+  mount GraphiQL::Rails::Engine, at: "/", graphql_path: "/graphql"
   post "/login", to: "login#post"
   post "/graphql", to: "graphql#execute"
   namespace :documentation do

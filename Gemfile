@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
@@ -64,8 +64,13 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+# Building
+gem 'bcrypt'
+gem 'foreman'
+
 # API
 gem 'graphql'
+gem 'graphiql-rails'
 gem 'doorkeeper'
 
 # Documentation
@@ -75,5 +80,3 @@ gem 'rails-pulse'
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'graphiql-rails', group: :development

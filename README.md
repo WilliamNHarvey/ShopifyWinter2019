@@ -1,24 +1,11 @@
-# README
+# Shopify Dev Challenge - Winter 2019
+## William Harvey
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hosted at shopify-winter.williamnharvey.com
 
-Things you may want to cover:
+Graphql endpoint: `/graphql`
 
-* Ruby version
+Documentation at shopify-winter.williamnharvey.com/documentation
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run locally with docker: `docker-compose up`
+https://www.docker.com/get-started
